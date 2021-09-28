@@ -56,15 +56,71 @@
 		E84E9CC627031A240046141B /* Trending Repos */ = {
 			isa = PBXGroup;
 			children = (
-				E84E9CC727031A240046141B /* AppDelegate.swift */,
-				E84E9CC927031A240046141B /* SceneDelegate.swift */,
-				E84E9CCB27031A240046141B /* ViewController.swift */,
-				E84E9CCD27031A240046141B /* Main.storyboard */,
-				E84E9CD027031A2C0046141B /* Assets.xcassets */,
-				E84E9CD227031A2C0046141B /* LaunchScreen.storyboard */,
-				E84E9CD527031A2C0046141B /* Info.plist */,
+				E84E9CE427032BD90046141B /* Configurations */,
+				E84E9CE327032B8C0046141B /* Resources */,
+				E84E9CE227032B820046141B /* Storyboards */,
+				E84E9CE127032B6C0046141B /* SupportingFiles */,
+				E84E9CE027032B630046141B /* ViewModels */,
+				E84E9CDF27032B5A0046141B /* Models */,
+				E84E9CDE27032A3A0046141B /* Views */,
 			);
 			path = "Trending Repos";
+			sourceTree = "<group>";
+		};
+		E84E9CDE27032A3A0046141B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E84E9CCB27031A240046141B /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E84E9CDF27032B5A0046141B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E84E9CE027032B630046141B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E84E9CE127032B6C0046141B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E84E9CC727031A240046141B /* AppDelegate.swift */,
+				E84E9CC927031A240046141B /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E84E9CE227032B820046141B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E84E9CD227031A2C0046141B /* LaunchScreen.storyboard */,
+				E84E9CCD27031A240046141B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E84E9CE327032B8C0046141B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E84E9CD027031A2C0046141B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E84E9CE427032BD90046141B /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				E84E9CD527031A2C0046141B /* Info.plist */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6Y8L32XBX;
-				INFOPLIST_FILE = "Trending Repos/Info.plist";
+				INFOPLIST_FILE = "Trending Repos/Configurations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,7 +364,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6Y8L32XBX;
-				INFOPLIST_FILE = "Trending Repos/Info.plist";
+				INFOPLIST_FILE = "Trending Repos/Configurations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
