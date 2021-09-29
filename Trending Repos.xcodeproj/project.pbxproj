@@ -3,31 +3,59 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F6D56E81055AB16FC8BBF35 /* Pods_Trending_Repos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CC7BF7CD2D55734FB99610 /* Pods_Trending_Repos.framework */; };
 		E84E9CC827031A240046141B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84E9CC727031A240046141B /* AppDelegate.swift */; };
 		E84E9CCA27031A240046141B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84E9CC927031A240046141B /* SceneDelegate.swift */; };
-		E84E9CCC27031A240046141B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84E9CCB27031A240046141B /* ViewController.swift */; };
 		E84E9CCF27031A240046141B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84E9CCD27031A240046141B /* Main.storyboard */; };
 		E84E9CD127031A2C0046141B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84E9CD027031A2C0046141B /* Assets.xcassets */; };
 		E84E9CD427031A2C0046141B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84E9CD227031A2C0046141B /* LaunchScreen.storyboard */; };
+		E84E9CEA27033E810046141B /* TrendingReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84E9CE927033E810046141B /* TrendingReposViewController.swift */; };
+		E8D362C82704EFA0008B0D93 /* TrendingReposViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D362C72704EFA0008B0D93 /* TrendingReposViewControllerTests.swift */; };
+		E8D362CD2704F182008B0D93 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D362CC2704F182008B0D93 /* UIStoryboard.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E8D362BE2704EF3A008B0D93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E84E9CBC27031A240046141B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E84E9CC327031A240046141B;
+			remoteInfo = "Trending Repos";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		807DE4F908640B1658B5D6E7 /* Pods-Trending Repos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trending Repos.release.xcconfig"; path = "Target Support Files/Pods-Trending Repos/Pods-Trending Repos.release.xcconfig"; sourceTree = "<group>"; };
+		A4CC7BF7CD2D55734FB99610 /* Pods_Trending_Repos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trending_Repos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4D646A09326C478F84DF940 /* Pods-Trending Repos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trending Repos.debug.xcconfig"; path = "Target Support Files/Pods-Trending Repos/Pods-Trending Repos.debug.xcconfig"; sourceTree = "<group>"; };
 		E84E9CC427031A240046141B /* Trending Repos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trending Repos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84E9CC727031A240046141B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E84E9CC927031A240046141B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E84E9CCB27031A240046141B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E84E9CCE27031A240046141B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E84E9CD027031A2C0046141B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E84E9CD327031A2C0046141B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E84E9CD527031A2C0046141B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E84E9CE927033E810046141B /* TrendingReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewController.swift; sourceTree = "<group>"; };
+		E8D362B92704EF3A008B0D93 /* Trending ReposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trending ReposTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8D362BD2704EF3A008B0D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8D362C72704EFA0008B0D93 /* TrendingReposViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewControllerTests.swift; sourceTree = "<group>"; };
+		E8D362CC2704F182008B0D93 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E84E9CC127031A240046141B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F6D56E81055AB16FC8BBF35 /* Pods_Trending_Repos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8D362B62704EF3A008B0D93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,11 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6F80FD562C3CBA659588775 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4D646A09326C478F84DF940 /* Pods-Trending Repos.debug.xcconfig */,
+				807DE4F908640B1658B5D6E7 /* Pods-Trending Repos.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C50F6E769B6F08784E0AA183 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4CC7BF7CD2D55734FB99610 /* Pods_Trending_Repos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E84E9CBB27031A240046141B = {
 			isa = PBXGroup;
 			children = (
 				E84E9CC627031A240046141B /* Trending Repos */,
+				E8D362BA2704EF3A008B0D93 /* Trending ReposTests */,
 				E84E9CC527031A240046141B /* Products */,
+				B6F80FD562C3CBA659588775 /* Pods */,
+				C50F6E769B6F08784E0AA183 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				E84E9CC427031A240046141B /* Trending Repos.app */,
+				E8D362B92704EF3A008B0D93 /* Trending ReposTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,13 +105,13 @@
 		E84E9CC627031A240046141B /* Trending Repos */ = {
 			isa = PBXGroup;
 			children = (
+				E8D362CB2704F16B008B0D93 /* Extensions */,
+				E8D362AF2704EE70008B0D93 /* Models */,
+				E8F0B81427047DA90031A798 /* Scenes */,
 				E84E9CE427032BD90046141B /* Configurations */,
 				E84E9CE327032B8C0046141B /* Resources */,
 				E84E9CE227032B820046141B /* Storyboards */,
 				E84E9CE127032B6C0046141B /* SupportingFiles */,
-				E84E9CE027032B630046141B /* ViewModels */,
-				E84E9CDF27032B5A0046141B /* Models */,
-				E84E9CDE27032A3A0046141B /* Views */,
 			);
 			path = "Trending Repos";
 			sourceTree = "<group>";
@@ -70,16 +119,9 @@
 		E84E9CDE27032A3A0046141B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E84E9CCB27031A240046141B /* ViewController.swift */,
+				E84E9CE927033E810046141B /* TrendingReposViewController.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		E84E9CDF27032B5A0046141B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		E84E9CE027032B630046141B /* ViewModels */ = {
@@ -123,6 +165,47 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		E8D362AF2704EE70008B0D93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E8D362BA2704EF3A008B0D93 /* Trending ReposTests */ = {
+			isa = PBXGroup;
+			children = (
+				E8D362BD2704EF3A008B0D93 /* Info.plist */,
+				E8D362C72704EFA0008B0D93 /* TrendingReposViewControllerTests.swift */,
+			);
+			path = "Trending ReposTests";
+			sourceTree = "<group>";
+		};
+		E8D362CB2704F16B008B0D93 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8D362CC2704F182008B0D93 /* UIStoryboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E8F0B81427047DA90031A798 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E8F0B81727047DB50031A798 /* Trending */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E8F0B81727047DB50031A798 /* Trending */ = {
+			isa = PBXGroup;
+			children = (
+				E84E9CDE27032A3A0046141B /* Views */,
+				E84E9CE027032B630046141B /* ViewModels */,
+			);
+			path = Trending;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E84E9CD827031A2C0046141B /* Build configuration list for PBXNativeTarget "Trending Repos" */;
 			buildPhases = (
+				CCC06141848E7A7E866DE600 /* [CP] Check Pods Manifest.lock */,
 				E84E9CC027031A240046141B /* Sources */,
 				E84E9CC127031A240046141B /* Frameworks */,
 				E84E9CC227031A240046141B /* Resources */,
@@ -143,6 +227,24 @@
 			productReference = E84E9CC427031A240046141B /* Trending Repos.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E8D362B82704EF3A008B0D93 /* Trending ReposTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8D362C02704EF3A008B0D93 /* Build configuration list for PBXNativeTarget "Trending ReposTests" */;
+			buildPhases = (
+				E8D362B52704EF3A008B0D93 /* Sources */,
+				E8D362B62704EF3A008B0D93 /* Frameworks */,
+				E8D362B72704EF3A008B0D93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8D362BF2704EF3A008B0D93 /* PBXTargetDependency */,
+			);
+			name = "Trending ReposTests";
+			productName = "Trending ReposTests";
+			productReference = E8D362B92704EF3A008B0D93 /* Trending ReposTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -154,6 +256,11 @@
 				TargetAttributes = {
 					E84E9CC327031A240046141B = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					E8D362B82704EF3A008B0D93 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+						TestTargetID = E84E9CC327031A240046141B;
 					};
 				};
 			};
@@ -171,6 +278,7 @@
 			projectRoot = "";
 			targets = (
 				E84E9CC327031A240046141B /* Trending Repos */,
+				E8D362B82704EF3A008B0D93 /* Trending ReposTests */,
 			);
 		};
 /* End PBXProject section */
@@ -186,20 +294,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8D362B72704EF3A008B0D93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CCC06141848E7A7E866DE600 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trending Repos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E84E9CC027031A240046141B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E84E9CCC27031A240046141B /* ViewController.swift in Sources */,
+				E8D362CD2704F182008B0D93 /* UIStoryboard.swift in Sources */,
 				E84E9CC827031A240046141B /* AppDelegate.swift in Sources */,
 				E84E9CCA27031A240046141B /* SceneDelegate.swift in Sources */,
+				E84E9CEA27033E810046141B /* TrendingReposViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8D362B52704EF3A008B0D93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8D362C82704EFA0008B0D93 /* TrendingReposViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E8D362BF2704EF3A008B0D93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E84E9CC327031A240046141B /* Trending Repos */;
+			targetProxy = E8D362BE2704EF3A008B0D93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E84E9CCD27031A240046141B /* Main.storyboard */ = {
@@ -339,6 +496,7 @@
 		};
 		E84E9CD927031A2C0046141B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4D646A09326C478F84DF940 /* Pods-Trending Repos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -359,6 +517,7 @@
 		};
 		E84E9CDA27031A2C0046141B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 807DE4F908640B1658B5D6E7 /* Pods-Trending Repos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -374,6 +533,49 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E8D362C12704EF3A008B0D93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W6Y8L32XBX;
+				INFOPLIST_FILE = "Trending ReposTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "practice.com.Trending-ReposTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trending Repos.app/Trending Repos";
+			};
+			name = Debug;
+		};
+		E8D362C22704EF3A008B0D93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W6Y8L32XBX;
+				INFOPLIST_FILE = "Trending ReposTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "practice.com.Trending-ReposTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trending Repos.app/Trending Repos";
 			};
 			name = Release;
 		};
@@ -394,6 +596,15 @@
 			buildConfigurations = (
 				E84E9CD927031A2C0046141B /* Debug */,
 				E84E9CDA27031A2C0046141B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8D362C02704EF3A008B0D93 /* Build configuration list for PBXNativeTarget "Trending ReposTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8D362C12704EF3A008B0D93 /* Debug */,
+				E8D362C22704EF3A008B0D93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
