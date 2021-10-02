@@ -31,6 +31,7 @@ class TrendingRepoTableViewCell: UITableViewCell {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		
+		setupUI()
 		showEpandedView(false)
 	}
 	
@@ -46,6 +47,33 @@ class TrendingRepoTableViewCell: UITableViewCell {
 	func showEpandedView(_ expand: Bool) {
 		languageAndStarsView.isHidden = !expand
 		descriptionLabel.isHidden = !expand
+	}
+	
+}
+
+// MARK: - Private Methods
+
+private extension TrendingRepoTableViewCell {
+	
+	func setupUI() {
+		userNameLabel.font = Font.medium(13)
+		userNameLabel.textColor = Color.secondaryTextColor
+		
+		repoNameLabel.font = Font.bold(15)
+		repoNameLabel.textColor = Color.primaryTextColor
+		
+		descriptionLabel.font = Font.regular(13)
+		descriptionLabel.textColor = Color.secondaryTextColor
+		
+		userPhotoImageView.setCornerRadius(20)
+		
+		languageColorView.setCornerRadius(6)
+		
+		languageNameLabel.font = Font.medium(12)
+		languageNameLabel.textColor = Color.secondaryTextColor
+		
+		starCountLabel.font = Font.medium(12)
+		starCountLabel.textColor = Color.secondaryTextColor
 	}
 	
 }

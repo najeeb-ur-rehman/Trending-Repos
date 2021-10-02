@@ -14,6 +14,9 @@
 		E84E9CD127031A2C0046141B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84E9CD027031A2C0046141B /* Assets.xcassets */; };
 		E84E9CD427031A2C0046141B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84E9CD227031A2C0046141B /* LaunchScreen.storyboard */; };
 		E84E9CEA27033E810046141B /* TrendingReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84E9CE927033E810046141B /* TrendingReposViewController.swift */; };
+		E8A2662C2708626C006826D8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2662B2708626C006826D8 /* Font.swift */; };
+		E8A266322708690B006826D8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A266312708690B006826D8 /* UIView.swift */; };
+		E8A2663627087531006826D8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2663527087531006826D8 /* Color.swift */; };
 		E8D214DF27061491009DF7C4 /* TrendingRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D214DE27061491009DF7C4 /* TrendingRepoTableViewCell.swift */; };
 		E8D214E3270614E6009DF7C4 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D214E2270614E6009DF7C4 /* UITableViewCell.swift */; };
 		E8D362C82704EFA0008B0D93 /* TrendingReposViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D362C72704EFA0008B0D93 /* TrendingReposViewControllerTests.swift */; };
@@ -42,6 +45,9 @@
 		E84E9CD327031A2C0046141B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E84E9CD527031A2C0046141B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E84E9CE927033E810046141B /* TrendingReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewController.swift; sourceTree = "<group>"; };
+		E8A2662B2708626C006826D8 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		E8A266312708690B006826D8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		E8A2663527087531006826D8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E8D214DE27061491009DF7C4 /* TrendingRepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTableViewCell.swift; sourceTree = "<group>"; };
 		E8D214E2270614E6009DF7C4 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		E8D362B92704EF3A008B0D93 /* Trending ReposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trending ReposTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +115,7 @@
 		E84E9CC627031A240046141B /* Trending Repos */ = {
 			isa = PBXGroup;
 			children = (
+				E8A2662A2708625C006826D8 /* Globals */,
 				E8D362CB2704F16B008B0D93 /* Extensions */,
 				E8D362AF2704EE70008B0D93 /* Models */,
 				E8F0B81427047DA90031A798 /* Scenes */,
@@ -170,6 +177,15 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		E8A2662A2708625C006826D8 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				E8A2662B2708626C006826D8 /* Font.swift */,
+				E8A2663527087531006826D8 /* Color.swift */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
 		E8D362AF2704EE70008B0D93 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +207,7 @@
 			children = (
 				E8D362CC2704F182008B0D93 /* UIStoryboard.swift */,
 				E8D214E2270614E6009DF7C4 /* UITableViewCell.swift */,
+				E8A266312708690B006826D8 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -339,12 +356,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8A266322708690B006826D8 /* UIView.swift in Sources */,
 				E8D362CD2704F182008B0D93 /* UIStoryboard.swift in Sources */,
 				E84E9CC827031A240046141B /* AppDelegate.swift in Sources */,
+				E8A2662C2708626C006826D8 /* Font.swift in Sources */,
 				E84E9CCA27031A240046141B /* SceneDelegate.swift in Sources */,
 				E8D214E3270614E6009DF7C4 /* UITableViewCell.swift in Sources */,
 				E8D214DF27061491009DF7C4 /* TrendingRepoTableViewCell.swift in Sources */,
 				E84E9CEA27033E810046141B /* TrendingReposViewController.swift in Sources */,
+				E8A2663627087531006826D8 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
