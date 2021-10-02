@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class TrendingReposViewController: UIViewController {
 	
@@ -19,11 +20,28 @@ class TrendingReposViewController: UIViewController {
         super.viewDidLoad()
 
 		self.title = "Trending"
+		
+		tableView.showAnimatedGradientSkeleton()
+		DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+			self.tableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(3))
+		}
 	}
 	
 }
 
-extension TrendingReposViewController: UITableViewDelegate, UITableViewDataSource {
+// MARK: -  SkeletonViewDataSource Methods
+
+extension TrendingReposViewController: SkeletonTableViewDataSource {
+	
+	func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+		return TrendingRepoTableViewCell.reuseIdentifier
+	}
+	
+}
+
+// MARK: - UITableViewDataSource Methods
+
+extension TrendingReposViewController {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return 15
@@ -42,3 +60,5 @@ extension TrendingReposViewController: UITableViewDelegate, UITableViewDataSourc
 	}
 	
 }
+
+

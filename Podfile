@@ -6,5 +6,6 @@ target 'Trending Repos' do
   use_frameworks!
 
   # Pods for Trending Repos
+	pod 'SkeletonView'
 
 end

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class TrendingRepoTableViewCell: UITableViewCell {
 	
@@ -32,6 +33,7 @@ class TrendingRepoTableViewCell: UITableViewCell {
 		super.awakeFromNib()
 		
 		setupUI()
+		configureSkeletonView()
 		showEpandedView(false)
 	}
 	
@@ -65,7 +67,7 @@ private extension TrendingRepoTableViewCell {
 		descriptionLabel.font = Font.regular(13)
 		descriptionLabel.textColor = Color.secondaryTextColor
 		
-		userPhotoImageView.setCornerRadius(20)
+		userPhotoImageView.setCornerRadius(20, andClipContent: true)
 		
 		languageColorView.setCornerRadius(6)
 		
@@ -74,6 +76,13 @@ private extension TrendingRepoTableViewCell {
 		
 		starCountLabel.font = Font.medium(12)
 		starCountLabel.textColor = Color.secondaryTextColor
+	}
+	
+	func configureSkeletonView() {
+		userNameLabel.lastLineFillPercent = 30
+		userNameLabel.linesCornerRadius = 8
+		repoNameLabel.lastLineFillPercent = 90
+		repoNameLabel.linesCornerRadius = 8
 	}
 	
 }
