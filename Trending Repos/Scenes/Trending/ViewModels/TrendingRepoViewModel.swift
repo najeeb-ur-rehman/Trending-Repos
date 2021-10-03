@@ -43,6 +43,7 @@ class TrendingRepoViewModel {
 		guard canFetch else {
 			return
 		}
+		currentPage = 0
 		fetchRepos { repos in
 			if self.isRefreshing.value {
 				self.isRefreshing.value = false
