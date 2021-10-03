@@ -13,6 +13,11 @@ struct User: Mappable {
 	var name: String?
 	var avatarUrl: URL?
 	
+	init(name: String? = nil, avatarUrl: URL? = nil) {
+		self.name = name
+		self.avatarUrl = avatarUrl
+	}
+	
 	init?(map: Map) {}
 	
 	mutating func mapping(map: Map) {

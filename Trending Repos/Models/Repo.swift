@@ -16,7 +16,7 @@ struct Repo: Mappable {
 	var language: String?
 	var user: User?
 	
-	internal init(name: String, description: String, stars: Int, language: String, user: User?) {
+	init(name: String, description: String, stars: Int, language: String, user: User?) {
 		self.name = name
 		self.description = description
 		self.stars = stars
@@ -35,16 +35,4 @@ struct Repo: Mappable {
 	}
 	
 	
-}
-
-
-extension Repo {
-	
-	static var dummyData: [Repo] {
-			return [
-				Repo(name: "Swift", description: "Apple's Swift language", stars: 14927, language: "Swift", user: nil),
-				Repo(name: "Swift2", description: "Apple's Swift language", stars: 14927, language: "C", user: nil)
-			]
-		}
-
 }

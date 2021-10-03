@@ -15,6 +15,11 @@ struct RepoListResponse: Mappable {
 	
 	init?(map: Map) {}
 	
+	 init(totalCount: Int? = nil, items: [Repo]? = nil) {
+		self.totalCount = totalCount
+		self.items = items
+	}
+	
 	mutating func mapping(map: Map) {
 		totalCount <- map["total_count"]
 		items <- map["items"]

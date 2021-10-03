@@ -30,6 +30,7 @@
 		E8A2664A27088A92006826D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2664927088A92006826D8 /* User.swift */; };
 		E8AB3B74270A4B4000A73A68 /* retry_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = E8AB3B73270A4B4000A73A68 /* retry_animation.json */; };
 		E8AB3B78270A5D0C00A73A68 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AB3B77270A5D0C00A73A68 /* UIColor.swift */; };
+		E8AB3B7C270A602D00A73A68 /* TrendingRepoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AB3B7B270A602D00A73A68 /* TrendingRepoViewModelTests.swift */; };
 		E8D214DF27061491009DF7C4 /* TrendingRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D214DE27061491009DF7C4 /* TrendingRepoTableViewCell.swift */; };
 		E8D214E3270614E6009DF7C4 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D214E2270614E6009DF7C4 /* UITableViewCell.swift */; };
 		E8D362C82704EFA0008B0D93 /* TrendingReposViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D362C72704EFA0008B0D93 /* TrendingReposViewControllerTests.swift */; };
@@ -74,6 +75,7 @@
 		E8A2664927088A92006826D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E8AB3B73270A4B4000A73A68 /* retry_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = retry_animation.json; sourceTree = "<group>"; };
 		E8AB3B77270A5D0C00A73A68 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		E8AB3B7B270A602D00A73A68 /* TrendingRepoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoViewModelTests.swift; sourceTree = "<group>"; };
 		E8D214DE27061491009DF7C4 /* TrendingRepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTableViewCell.swift; sourceTree = "<group>"; };
 		E8D214E2270614E6009DF7C4 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		E8D362B92704EF3A008B0D93 /* Trending ReposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trending ReposTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -275,6 +277,7 @@
 			children = (
 				E8D362BD2704EF3A008B0D93 /* Info.plist */,
 				E8D362C72704EFA0008B0D93 /* TrendingReposViewControllerTests.swift */,
+				E8AB3B7B270A602D00A73A68 /* TrendingRepoViewModelTests.swift */,
 			);
 			path = "Trending ReposTests";
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8AB3B7C270A602D00A73A68 /* TrendingRepoViewModelTests.swift in Sources */,
 				E8D362C82704EFA0008B0D93 /* TrendingReposViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

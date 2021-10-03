@@ -39,9 +39,8 @@ class TrendingReposViewControllerTests: XCTestCase {
 		XCTAssertNotNil(sut.tableView.delegate)
 		XCTAssertNotNil(sut.tableView.dataSource)
 		
-		// To check that the controller implements the protocols
-		XCTAssertNotNil(sut as? UITableViewDataSource)
-		XCTAssertNotNil(sut as? UITableViewDelegate)
+		XCTAssertTrue(sut === sut.tableView.delegate)
+		XCTAssertTrue(sut === sut.tableView.dataSource)
 	}
 	
 	func test_cell_expansionAndCollapsion() throws {
