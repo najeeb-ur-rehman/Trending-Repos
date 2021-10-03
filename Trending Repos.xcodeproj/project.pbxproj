@@ -14,6 +14,7 @@
 		E84E9CD127031A2C0046141B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84E9CD027031A2C0046141B /* Assets.xcassets */; };
 		E84E9CD427031A2C0046141B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84E9CD227031A2C0046141B /* LaunchScreen.storyboard */; };
 		E84E9CEA27033E810046141B /* TrendingReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84E9CE927033E810046141B /* TrendingReposViewController.swift */; };
+		E88C69382709C3B5004318B5 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C69372709C3B5004318B5 /* UITableView.swift */; };
 		E8A2662C2708626C006826D8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2662B2708626C006826D8 /* Font.swift */; };
 		E8A266322708690B006826D8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A266312708690B006826D8 /* UIView.swift */; };
 		E8A2663627087531006826D8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2663527087531006826D8 /* Color.swift */; };
@@ -49,6 +50,7 @@
 		E84E9CD327031A2C0046141B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E84E9CD527031A2C0046141B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E84E9CE927033E810046141B /* TrendingReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewController.swift; sourceTree = "<group>"; };
+		E88C69372709C3B5004318B5 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		E8A2662B2708626C006826D8 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		E8A266312708690B006826D8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E8A2663527087531006826D8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				E8D362CC2704F182008B0D93 /* UIStoryboard.swift */,
 				E8D214E2270614E6009DF7C4 /* UITableViewCell.swift */,
 				E8A266312708690B006826D8 /* UIView.swift */,
+				E88C69372709C3B5004318B5 /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				E84E9CEA27033E810046141B /* TrendingReposViewController.swift in Sources */,
 				E8A26642270889B1006826D8 /* Bindable.swift in Sources */,
 				E8A2663627087531006826D8 /* Color.swift in Sources */,
+				E88C69382709C3B5004318B5 /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,6 @@ import SkeletonView
 
 class TrendingReposViewController: UIViewController {
 	
-	private let refreshControl = UIRefreshControl()
 	var viewModel = TrendingRepoViewModel()
 	
 	// MARK: Outlets
@@ -24,7 +23,7 @@ class TrendingReposViewController: UIViewController {
 
 		self.title = "Trending"
 			
-		configureRefreshControl()
+		tableView.configureRefreshControlWithTarget(self, andSelector: #selector(fetchLatestData))
 		setupBindings()
 		viewModel.fetchFirstPage()
 	}
@@ -43,7 +42,7 @@ class TrendingReposViewController: UIViewController {
 		}
 		viewModel.isRefreshing.updateHandler = { showLoader in
 			if !showLoader {
-				self.refreshControl.endRefreshing()
+				self.tableView.endRefreshing()
 			}
 		}
 	}
@@ -67,12 +66,6 @@ private extension TrendingReposViewController {
 		} else {
 			tableView.reloadData()
 		}
-	}
-	
-	func configureRefreshControl() {
-		refreshControl.tintColor = Color.primaryColor
-		tableView.refreshControl = refreshControl
-		refreshControl.addTarget(self, action: #selector(fetchLatestData), for: .valueChanged)
 	}
 	
 }
