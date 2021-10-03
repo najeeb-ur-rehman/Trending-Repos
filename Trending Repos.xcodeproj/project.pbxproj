@@ -15,6 +15,9 @@
 		E84E9CD427031A2C0046141B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84E9CD227031A2C0046141B /* LaunchScreen.storyboard */; };
 		E84E9CEA27033E810046141B /* TrendingReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84E9CE927033E810046141B /* TrendingReposViewController.swift */; };
 		E88C69382709C3B5004318B5 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C69372709C3B5004318B5 /* UITableView.swift */; };
+		E88C694E2709E61B004318B5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C694D2709E61B004318B5 /* APIClient.swift */; };
+		E88C69552709F38D004318B5 /* ReposDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C69542709F38D004318B5 /* ReposDataRepository.swift */; };
+		E88C695B270A0226004318B5 /* RepoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C695A270A0226004318B5 /* RepoListResponse.swift */; };
 		E8A2662C2708626C006826D8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2662B2708626C006826D8 /* Font.swift */; };
 		E8A266322708690B006826D8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A266312708690B006826D8 /* UIView.swift */; };
 		E8A2663627087531006826D8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2663527087531006826D8 /* Color.swift */; };
@@ -51,6 +54,9 @@
 		E84E9CD527031A2C0046141B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E84E9CE927033E810046141B /* TrendingReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewController.swift; sourceTree = "<group>"; };
 		E88C69372709C3B5004318B5 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		E88C694D2709E61B004318B5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		E88C69542709F38D004318B5 /* ReposDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposDataRepository.swift; sourceTree = "<group>"; };
+		E88C695A270A0226004318B5 /* RepoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListResponse.swift; sourceTree = "<group>"; };
 		E8A2662B2708626C006826D8 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		E8A266312708690B006826D8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E8A2663527087531006826D8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -125,6 +131,8 @@
 		E84E9CC627031A240046141B /* Trending Repos */ = {
 			isa = PBXGroup;
 			children = (
+				E88C69532709F34A004318B5 /* DataRepositories */,
+				E88C694C2709E5FE004318B5 /* Managers */,
 				E8A2662A2708625C006826D8 /* Globals */,
 				E8D362CB2704F16B008B0D93 /* Extensions */,
 				E8D362AF2704EE70008B0D93 /* Models */,
@@ -188,6 +196,22 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		E88C694C2709E5FE004318B5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E88C694D2709E61B004318B5 /* APIClient.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E88C69532709F34A004318B5 /* DataRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				E88C69542709F38D004318B5 /* ReposDataRepository.swift */,
+			);
+			path = DataRepositories;
+			sourceTree = "<group>";
+		};
 		E8A2662A2708625C006826D8 /* Globals */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +227,7 @@
 				E8A26641270889B1006826D8 /* Bindable.swift */,
 				E8A2664527088A41006826D8 /* Repo.swift */,
 				E8A2664927088A92006826D8 /* User.swift */,
+				E88C695A270A0226004318B5 /* RepoListResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -392,17 +417,20 @@
 				E8A2664A27088A92006826D8 /* User.swift in Sources */,
 				E8A266322708690B006826D8 /* UIView.swift in Sources */,
 				E8D362CD2704F182008B0D93 /* UIStoryboard.swift in Sources */,
+				E88C69552709F38D004318B5 /* ReposDataRepository.swift in Sources */,
 				E84E9CC827031A240046141B /* AppDelegate.swift in Sources */,
 				E8A2664627088A41006826D8 /* Repo.swift in Sources */,
 				E8A2663E27088974006826D8 /* TrendingRepoViewModel.swift in Sources */,
 				E8A2662C2708626C006826D8 /* Font.swift in Sources */,
 				E84E9CCA27031A240046141B /* SceneDelegate.swift in Sources */,
+				E88C694E2709E61B004318B5 /* APIClient.swift in Sources */,
 				E8D214E3270614E6009DF7C4 /* UITableViewCell.swift in Sources */,
 				E8D214DF27061491009DF7C4 /* TrendingRepoTableViewCell.swift in Sources */,
 				E84E9CEA27033E810046141B /* TrendingReposViewController.swift in Sources */,
 				E8A26642270889B1006826D8 /* Bindable.swift in Sources */,
 				E8A2663627087531006826D8 /* Color.swift in Sources */,
 				E88C69382709C3B5004318B5 /* UITableView.swift in Sources */,
+				E88C695B270A0226004318B5 /* RepoListResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

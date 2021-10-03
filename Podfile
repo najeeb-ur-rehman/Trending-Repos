@@ -8,5 +8,6 @@ target 'Trending Repos' do
   # Pods for Trending Repos
 	pod 'SkeletonView'
 	pod 'SDWebImage'
+	pod 'ObjectMapper'
 
 end

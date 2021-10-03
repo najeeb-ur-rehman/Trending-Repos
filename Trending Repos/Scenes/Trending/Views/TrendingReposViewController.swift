@@ -12,7 +12,7 @@ class TrendingReposViewController: UIViewController {
 	
 	var viewModel = TrendingRepoViewModel()
 	
-	lazy var loadingFooterView: UIView = {
+	private lazy var loadingFooterView: UIView = {
 		let indicator = UIActivityIndicatorView()
 		indicator.tintColor = Color.primaryColor
 		indicator.hidesWhenStopped = true
@@ -34,14 +34,10 @@ class TrendingReposViewController: UIViewController {
         super.viewDidLoad()
 
 		self.title = "Trending"
-			
-		tableView.configureRefreshControlWithTarget(self, andSelector: #selector(fetchLatestData))
+		
 		setupBindings()
 		viewModel.fetchFirstPage()
-	}
-	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
+		initialSetup()
 		
 		if viewModel.isSkeletonViewAvailable {
 			tableView.showAnimatedGradientSkeleton()
@@ -59,18 +55,35 @@ class TrendingReposViewController: UIViewController {
 
 private extension TrendingReposViewController {
 	
+	func initialSetup() {
+		tableView.configureRefreshControlWithTarget(self, andSelector: #selector(fetchLatestData))
+		viewModel.isNextPageFetching.value = false
+	}
+	
 	func setupBindings() {
 		viewModel.reposListBinder.updateHandler = { _ in
-			self.handleDataUpdate()
+			DispatchQueue.main.async {
+				self.handleDataUpdate()
+			}
+			
 		}
 		viewModel.isRefreshing.updateHandler = { showLoader in
 			if !showLoader {
-				self.tableView.endRefreshing()
+				DispatchQueue.main.async {
+					self.tableView.endRefreshing()
+				}
 			}
 		}
 		viewModel.isNextPageFetching.updateHandler = { isFetching in
-			let footerView: UIView = isFetching ? self.loadingFooterView : UIView()
-			self.tableView.tableFooterView = footerView
+			DispatchQueue.main.async {
+				let footerView: UIView = isFetching ? self.loadingFooterView : UIView()
+				self.tableView.tableFooterView = footerView
+			}
+		}
+		viewModel.showError.updateHandler = { errorMessage in
+			DispatchQueue.main.async {
+				// Show error
+			}
 		}
 	}
 	
@@ -83,7 +96,6 @@ private extension TrendingReposViewController {
 			tableView.reloadData()
 		}
 	}
-	
 	
 }
 
@@ -128,7 +140,8 @@ extension TrendingReposViewController: UITableViewDelegate {
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		let actualPosition = scrollView.contentOffset.y
 		let contentHeight = scrollView.contentSize.height - scrollView.frame.size.height
-		if contentHeight > 0 && contentHeight - actualPosition <= 20 && !viewModel.isFetching {
+		let shouldFetch = contentHeight > 0 && contentHeight - actualPosition <= 20 && viewModel.canFetch && viewModel.isNextPageAvailable
+		if shouldFetch {
 			viewModel.fetchNextPage()
 		}
 	}

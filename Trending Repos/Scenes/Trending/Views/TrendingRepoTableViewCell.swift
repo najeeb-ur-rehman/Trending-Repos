@@ -59,7 +59,7 @@ class TrendingRepoTableViewCell: UITableViewCell {
 		languageNameLabel.text = repo.language
 		starCountLabel.text = String(repo.stars ?? 0)
 		
-		let url = URL(string: repo.user?.avatarUrl ?? "")
+		let url = repo.user?.avatarUrl
 		userPhotoImageView.sd_setImage(with: url,
 									   placeholderImage: UIImage(named: "profile_placeholder"),
 									   options: [], context: nil)

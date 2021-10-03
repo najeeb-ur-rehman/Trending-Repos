@@ -6,11 +6,18 @@
 //
 
 import Foundation
+import ObjectMapper
 
-struct User {
+struct User: Mappable {
 	
-	var id: Int?
 	var name: String?
-	var avatarUrl: String?
+	var avatarUrl: URL?
+	
+	init?(map: Map) {}
+	
+	mutating func mapping(map: Map) {
+		name <- map["login"]
+		avatarUrl <- (map["avatar_url"], URLTransform())
+	}
 	
 }
