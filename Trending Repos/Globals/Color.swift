@@ -9,6 +9,8 @@ import UIKit
 
 enum Color {
 	
+	static let primaryColor = UIColor(named: "PrimaryColor")
+	static let invertedPrimaryColor = UIColor(named: "InvertedPrimaryColor")
 	static let primaryTextColor = UIColor(named: "PrimaryTextColor")
 	static let secondaryTextColor = UIColor(named: "SecondaryTextColor")
 }

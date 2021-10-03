@@ -10,6 +10,9 @@ import SkeletonView
 
 class TrendingReposViewController: UIViewController {
 	
+	private let refreshControl = UIRefreshControl()
+	var viewModel = TrendingRepoViewModel()
+	
 	// MARK: Outlets
 	
 	@IBOutlet weak var tableView: UITableView!
@@ -20,11 +23,56 @@ class TrendingReposViewController: UIViewController {
         super.viewDidLoad()
 
 		self.title = "Trending"
+			
+		configureRefreshControl()
+		setupBindings()
+		viewModel.fetchFirstPage()
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
 		
-		tableView.showAnimatedGradientSkeleton()
-		DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-			self.tableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(3))
+		if viewModel.isSkeletonViewAvailable {
+			tableView.showAnimatedGradientSkeleton()
 		}
+	}
+	
+	func setupBindings() {
+		viewModel.reposListBinder.updateHandler = { _ in
+			self.handleDataUpdate()
+		}
+		viewModel.isRefreshing.updateHandler = { showLoader in
+			if !showLoader {
+				self.refreshControl.endRefreshing()
+			}
+		}
+	}
+	
+	@objc
+	func fetchLatestData() {
+		viewModel.refreshData()
+	}
+	
+}
+
+// MARK: - Private Methods
+
+private extension TrendingReposViewController {
+	
+	func handleDataUpdate() {
+		if viewModel.isSkeletonViewAvailable {
+			viewModel.isSkeletonViewAvailable = false
+			tableView.isSkeletonable = false
+			tableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(3))
+		} else {
+			tableView.reloadData()
+		}
+	}
+	
+	func configureRefreshControl() {
+		refreshControl.tintColor = Color.primaryColor
+		tableView.refreshControl = refreshControl
+		refreshControl.addTarget(self, action: #selector(fetchLatestData), for: .valueChanged)
 	}
 	
 }
@@ -44,21 +92,27 @@ extension TrendingReposViewController: SkeletonTableViewDataSource {
 extension TrendingReposViewController {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 15
+		return viewModel.repoObjects.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: TrendingRepoTableViewCell.reuseIdentifier,
 												 for: indexPath) as! TrendingRepoTableViewCell
+		cell.setRepo(viewModel.repoObjects[indexPath.row])
 		return cell
+	
 	}
 	
+}
+
+// MARK: - UITableViewDelegate Methods
+
+extension TrendingReposViewController: UITableViewDelegate {
+
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		UIView.animate(withDuration: 0.3) {
 			tableView.performBatchUpdates(nil)
 		}
 	}
-	
+
 }
-
-

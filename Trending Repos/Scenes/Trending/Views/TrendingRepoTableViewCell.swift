@@ -7,6 +7,7 @@
 
 import UIKit
 import SkeletonView
+import SDWebImage
 
 class TrendingRepoTableViewCell: UITableViewCell {
 	
@@ -49,6 +50,20 @@ class TrendingRepoTableViewCell: UITableViewCell {
 	func showEpandedView(_ expand: Bool) {
 		languageAndStarsView.isHidden = !expand
 		descriptionLabel.isHidden = !expand
+	}
+	
+	func setRepo(_ repo: Repo) {
+		userNameLabel.text = repo.user?.name
+		repoNameLabel.text = repo.name
+		descriptionLabel.text = repo.description
+		languageNameLabel.text = repo.language
+		starCountLabel.text = String(repo.stars ?? 0)
+		
+		let url = URL(string: repo.user?.avatarUrl ?? "")
+		userPhotoImageView.sd_setImage(with: url,
+									   placeholderImage: UIImage(named: "profile_placeholder"),
+									   options: [], context: nil)
+		
 	}
 	
 }

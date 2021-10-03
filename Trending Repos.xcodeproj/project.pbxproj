@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,10 @@
 		E8A2662C2708626C006826D8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2662B2708626C006826D8 /* Font.swift */; };
 		E8A266322708690B006826D8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A266312708690B006826D8 /* UIView.swift */; };
 		E8A2663627087531006826D8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2663527087531006826D8 /* Color.swift */; };
+		E8A2663E27088974006826D8 /* TrendingRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2663D27088974006826D8 /* TrendingRepoViewModel.swift */; };
+		E8A26642270889B1006826D8 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A26641270889B1006826D8 /* Bindable.swift */; };
+		E8A2664627088A41006826D8 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2664527088A41006826D8 /* Repo.swift */; };
+		E8A2664A27088A92006826D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A2664927088A92006826D8 /* User.swift */; };
 		E8D214DF27061491009DF7C4 /* TrendingRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D214DE27061491009DF7C4 /* TrendingRepoTableViewCell.swift */; };
 		E8D214E3270614E6009DF7C4 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D214E2270614E6009DF7C4 /* UITableViewCell.swift */; };
 		E8D362C82704EFA0008B0D93 /* TrendingReposViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D362C72704EFA0008B0D93 /* TrendingReposViewControllerTests.swift */; };
@@ -48,6 +52,10 @@
 		E8A2662B2708626C006826D8 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		E8A266312708690B006826D8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E8A2663527087531006826D8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E8A2663D27088974006826D8 /* TrendingRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoViewModel.swift; sourceTree = "<group>"; };
+		E8A26641270889B1006826D8 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		E8A2664527088A41006826D8 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		E8A2664927088A92006826D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E8D214DE27061491009DF7C4 /* TrendingRepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoTableViewCell.swift; sourceTree = "<group>"; };
 		E8D214E2270614E6009DF7C4 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		E8D362B92704EF3A008B0D93 /* Trending ReposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trending ReposTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +147,7 @@
 		E84E9CE027032B630046141B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E8A2663D27088974006826D8 /* TrendingRepoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -189,6 +198,9 @@
 		E8D362AF2704EE70008B0D93 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E8A26641270889B1006826D8 /* Bindable.swift */,
+				E8A2664527088A41006826D8 /* Repo.swift */,
+				E8A2664927088A92006826D8 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -374,14 +386,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8A2664A27088A92006826D8 /* User.swift in Sources */,
 				E8A266322708690B006826D8 /* UIView.swift in Sources */,
 				E8D362CD2704F182008B0D93 /* UIStoryboard.swift in Sources */,
 				E84E9CC827031A240046141B /* AppDelegate.swift in Sources */,
+				E8A2664627088A41006826D8 /* Repo.swift in Sources */,
+				E8A2663E27088974006826D8 /* TrendingRepoViewModel.swift in Sources */,
 				E8A2662C2708626C006826D8 /* Font.swift in Sources */,
 				E84E9CCA27031A240046141B /* SceneDelegate.swift in Sources */,
 				E8D214E3270614E6009DF7C4 /* UITableViewCell.swift in Sources */,
 				E8D214DF27061491009DF7C4 /* TrendingRepoTableViewCell.swift in Sources */,
 				E84E9CEA27033E810046141B /* TrendingReposViewController.swift in Sources */,
+				E8A26642270889B1006826D8 /* Bindable.swift in Sources */,
 				E8A2663627087531006826D8 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
