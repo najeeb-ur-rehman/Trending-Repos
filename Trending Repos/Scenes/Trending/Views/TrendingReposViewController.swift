@@ -12,6 +12,18 @@ class TrendingReposViewController: UIViewController {
 	
 	var viewModel = TrendingRepoViewModel()
 	
+	lazy var loadingFooterView: UIView = {
+		let indicator = UIActivityIndicatorView()
+		indicator.tintColor = Color.primaryColor
+		indicator.hidesWhenStopped = true
+		indicator.startAnimating()
+		indicator.frame = CGRect(x: UIScreen.main.bounds.width/2 - 10, y: 15, width: 20, height: 20)
+		
+		let view = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+		view.addSubview(indicator)
+		return view
+	}()
+	
 	// MARK: Outlets
 	
 	@IBOutlet weak var tableView: UITableView!
@@ -36,17 +48,6 @@ class TrendingReposViewController: UIViewController {
 		}
 	}
 	
-	func setupBindings() {
-		viewModel.reposListBinder.updateHandler = { _ in
-			self.handleDataUpdate()
-		}
-		viewModel.isRefreshing.updateHandler = { showLoader in
-			if !showLoader {
-				self.tableView.endRefreshing()
-			}
-		}
-	}
-	
 	@objc
 	func fetchLatestData() {
 		viewModel.refreshData()
@@ -58,6 +59,21 @@ class TrendingReposViewController: UIViewController {
 
 private extension TrendingReposViewController {
 	
+	func setupBindings() {
+		viewModel.reposListBinder.updateHandler = { _ in
+			self.handleDataUpdate()
+		}
+		viewModel.isRefreshing.updateHandler = { showLoader in
+			if !showLoader {
+				self.tableView.endRefreshing()
+			}
+		}
+		viewModel.isNextPageFetching.updateHandler = { isFetching in
+			let footerView: UIView = isFetching ? self.loadingFooterView : UIView()
+			self.tableView.tableFooterView = footerView
+		}
+	}
+	
 	func handleDataUpdate() {
 		if viewModel.isSkeletonViewAvailable {
 			viewModel.isSkeletonViewAvailable = false
@@ -67,6 +83,7 @@ private extension TrendingReposViewController {
 			tableView.reloadData()
 		}
 	}
+	
 	
 }
 
@@ -105,6 +122,14 @@ extension TrendingReposViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		UIView.animate(withDuration: 0.3) {
 			tableView.performBatchUpdates(nil)
+		}
+	}
+	
+	func scrollViewDidScroll(_ scrollView: UIScrollView) {
+		let actualPosition = scrollView.contentOffset.y
+		let contentHeight = scrollView.contentSize.height - scrollView.frame.size.height
+		if contentHeight > 0 && contentHeight - actualPosition <= 20 && !viewModel.isFetching {
+			viewModel.fetchNextPage()
 		}
 	}
 

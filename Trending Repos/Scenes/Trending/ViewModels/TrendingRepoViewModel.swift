@@ -41,6 +41,17 @@ class TrendingRepoViewModel {
 		}
 	}
 	
+	func fetchNextPage() {
+		guard canFetch else {
+			return
+		}
+		isNextPageFetching.value = true
+		fetchRepos { repos in
+			self.isNextPageFetching.value = false
+			self.reposListBinder.value.append(contentsOf: repos)
+		}
+	}
+	
 	private func fetchRepos(_ completion: @escaping ([Repo]) -> Void) {
 		isFetching = true
 		DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
