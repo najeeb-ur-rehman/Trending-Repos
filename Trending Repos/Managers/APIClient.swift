@@ -7,53 +7,19 @@
 
 import Foundation
 
-enum HTTPMethod: String {
-	case GET
-	case POST
-	case PUT
-	case DELETE
-}
-
-enum TrendingRepoError: Error {
-	case badURL
-	case custom(_ message: String)
-}
-
-protocol HTTPRequest {
-	
-	var endPoint: URL? { get }
-	
-	var method: HTTPMethod { get }
-	
-	var parameters: [String : Any]? { get }
-	
-	var headers: [String : String]? { get }
-	
-}
-
-extension HTTPRequest {
-	
-	var parameters: [String : Any]? { nil }
-	
-	var headers: [String : String]? { nil }
-}
-
 typealias APIClientResult = Result<Any, TrendingRepoError>
 
 class APIClient {
 	
-	
-	// MARK: - Class Instances
+	// MARK: Class Instances
 	
 	static let shared = APIClient()
 	
-	
-	// MARK: - Initializers
+	// MARK: Initializers
 	
 	private init() {}
 	
-	
-	// MARK: - Public Methods
+	// MARK: Public Methods
 	
 	func performRequest(_ request: HTTPRequest, withCompletion completion: @escaping (APIClientResult) -> Void) {
 		guard let endpoint = request.endPoint else {
@@ -88,6 +54,36 @@ class APIClient {
 		
 	}
 	
+}
+
+
+enum HTTPMethod: String {
+	case GET
+	case POST
+	case PUT
+	case DELETE
+}
+
+enum TrendingRepoError: Error {
+	case badURL
+	case custom(_ message: String)
+}
+
+protocol HTTPRequest {
+	
+	var endPoint: URL? { get }
+	
+	var method: HTTPMethod { get }
+	
+	var parameters: [String : Any]? { get }
+	
+	var headers: [String : String]? { get }
 	
 }
 
+extension HTTPRequest {
+	
+	var parameters: [String : Any]? { nil }
+	
+	var headers: [String : String]? { nil }
+}

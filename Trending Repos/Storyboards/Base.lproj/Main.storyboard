@@ -34,6 +34,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SsI-Zi-vA6" customClass="EmptyDataView" customModule="Trending_Repos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Yg-Yk-RpF">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -216,14 +220,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SsI-Zi-vA6" secondAttribute="trailing" id="8PV-ax-Cxh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Yg-Yk-RpF" secondAttribute="trailing" id="8zw-xc-PGO"/>
                             <constraint firstItem="0Yg-Yk-RpF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FI0-gK-UWf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SsI-Zi-vA6" secondAttribute="bottom" id="NSE-H0-47E"/>
+                            <constraint firstItem="SsI-Zi-vA6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hmZ-T4-eQK"/>
+                            <constraint firstItem="SsI-Zi-vA6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i5s-b3-5nU"/>
                             <constraint firstItem="0Yg-Yk-RpF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m6C-Kp-FJ8"/>
                             <constraint firstAttribute="bottom" secondItem="0Yg-Yk-RpF" secondAttribute="bottom" id="uzR-SQ-m1g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eNk-pw-uPr"/>
                     <connections>
+                        <outlet property="emptyDataView" destination="SsI-Zi-vA6" id="eeU-UY-zXs"/>
                         <outlet property="tableView" destination="0Yg-Yk-RpF" id="EPM-YB-GmG"/>
                     </connections>
                 </viewController>

@@ -26,6 +26,7 @@ class TrendingReposViewController: UIViewController {
 	
 	// MARK: Outlets
 	
+	@IBOutlet weak var emptyDataView: EmptyDataView!
 	@IBOutlet weak var tableView: UITableView!
 	
 	// MARK: ViewController Lifecycle Methods
@@ -39,13 +40,19 @@ class TrendingReposViewController: UIViewController {
 		viewModel.fetchFirstPage()
 		initialSetup()
 		
-		if viewModel.isSkeletonViewAvailable {
-			tableView.showAnimatedGradientSkeleton()
-		}
+		tableView.showAnimatedSkeleton()
 	}
 	
 	@objc
 	func fetchLatestData() {
+		viewModel.refreshData()
+	}
+	
+	@objc
+	func retryButtonHandler() {
+		setSkeletonViewAvailableStatus(true)
+		tableView.showAnimatedSkeleton()
+		showEmptyViewIfNecessary()
 		viewModel.refreshData()
 	}
 	
@@ -58,6 +65,9 @@ private extension TrendingReposViewController {
 	func initialSetup() {
 		tableView.configureRefreshControlWithTarget(self, andSelector: #selector(fetchLatestData))
 		viewModel.isNextPageFetching.value = false
+		emptyDataView.retryButton.addTarget(self,
+											action: #selector(retryButtonHandler),
+											for: .touchUpInside)
 	}
 	
 	func setupBindings() {
@@ -65,7 +75,6 @@ private extension TrendingReposViewController {
 			DispatchQueue.main.async {
 				self.handleDataUpdate()
 			}
-			
 		}
 		viewModel.isRefreshing.updateHandler = { showLoader in
 			if !showLoader {
@@ -82,19 +91,30 @@ private extension TrendingReposViewController {
 		}
 		viewModel.showError.updateHandler = { errorMessage in
 			DispatchQueue.main.async {
-				// Show error
+				Utils.showOkAlert(title: "Error", message: errorMessage, viewController: self)
 			}
 		}
 	}
 	
 	func handleDataUpdate() {
 		if viewModel.isSkeletonViewAvailable {
-			viewModel.isSkeletonViewAvailable = false
-			tableView.isSkeletonable = false
+			setSkeletonViewAvailableStatus(false)
 			tableView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(3))
 		} else {
 			tableView.reloadData()
 		}
+		showEmptyViewIfNecessary()
+	}
+	
+	func showEmptyViewIfNecessary() {
+		let showEmptyDataView = !viewModel.isSkeletonViewAvailable && viewModel.repoObjects.isEmpty
+		emptyDataView.isHidden = !showEmptyDataView
+		tableView.isHidden = showEmptyDataView
+	}
+	
+	func setSkeletonViewAvailableStatus(_ available: Bool) {
+		viewModel.isSkeletonViewAvailable = available
+		tableView.isSkeletonable = available
 	}
 	
 }

@@ -57,6 +57,7 @@ class TrendingRepoTableViewCell: UITableViewCell {
 		repoNameLabel.text = repo.name
 		descriptionLabel.text = repo.description
 		languageNameLabel.text = repo.language
+		languageColorView.backgroundColor = UIColor.colorFromString(repo.language ?? "")
 		starCountLabel.text = String(repo.stars ?? 0)
 		
 		let url = repo.user?.avatarUrl

@@ -9,5 +9,6 @@ target 'Trending Repos' do
 	pod 'SkeletonView'
 	pod 'SDWebImage'
 	pod 'ObjectMapper'
+	pod 'lottie-ios'
 
 end

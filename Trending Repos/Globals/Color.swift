@@ -13,4 +13,6 @@ enum Color {
 	static let invertedPrimaryColor = UIColor(named: "InvertedPrimaryColor")
 	static let primaryTextColor = UIColor(named: "PrimaryTextColor")
 	static let secondaryTextColor = UIColor(named: "SecondaryTextColor")
+	static let green = UIColor(named: "Green")
+	
 }
